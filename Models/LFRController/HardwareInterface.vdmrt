@@ -1,0 +1,22 @@
+class HardwareInterface
+
+
+instance variables
+    
+  -- @ interface: type = input, name="lfLeftVal";
+  public static leftVal : real := 0.0;
+  -- @ interface: type = input, name="lfRightVal";
+  public static rightVal : real := 0.0;
+
+instance variables
+
+  -- @ interface: type = output, name="servoRightVal";
+  public static servo_right_out : real := 0.0;
+ 
+  -- @ interface: type = output, name="servoLeftVal";
+  public static servo_left_out : real := 0.0;
+  
+end HardwareInterface
+
+
+  

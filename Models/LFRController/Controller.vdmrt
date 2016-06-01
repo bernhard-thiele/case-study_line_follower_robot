@@ -1,0 +1,49 @@
+class Controller
+
+instance variables
+	servoLeft: RobotServo;
+	servoRight: RobotServo;
+	sensorRightVal :RobotSensor;
+	sensorLeftVal :RobotSensor;
+
+operations
+
+	public Controller : RobotServo * RobotServo * RobotSensor * RobotSensor ==> Controller
+	Controller(servL, servR, sensRightVal, sensLeftVal) == 
+	(
+	  servoLeft:= servL; 
+  	servoRight:= servR;
+	  sensorRightVal:= sensRightVal;
+  	sensorLeftVal:= sensLeftVal
+  );
+
+   private control_loop : () ==> ()
+	control_loop() == cycles(0) (
+	
+		if (sensorRightVal.getReading() < 150 and sensorLeftVal.getReading() < 150)
+		then (
+			servoRight.setServo(-0.4);--sensorRight.getReading());---0.4);
+			servoLeft.setServo(0.4);--sensorLeft.getReading());--0.4);
+		);
+		
+		if (sensorRightVal.getReading() < 150 and sensorLeftVal.getReading() > 150)
+		then (
+			servoRight.setServo(-0.5);--sensorRight.getReading());---0.5);
+			servoLeft.setServo(0.1);--sensorLeft.getReading());--0.1);
+		);
+		
+		if (sensorRightVal.getReading() > 150 and sensorLeftVal.getReading() < 150)
+		then (
+			servoRight.setServo(-0.1);--sensorRight.getReading());---0.1);
+			servoLeft.setServo(0.5);--sensorLeft.getReading());--0.5);
+		);
+
+		if (sensorRightVal.getReading() > 150 and sensorLeftVal.getReading() > 150)
+		then skip
+   );
+
+thread
+
+	periodic(10E6,0,0,0)(control_loop);	 
+		 
+end Controller
