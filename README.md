@@ -2,4 +2,4 @@
 
 A line following robot case study project
 
-This repo contains an into-cps application project for the case study Line Follower Robot
+This repo contains an into-cps application project for the case study **Line Follower Robot**
