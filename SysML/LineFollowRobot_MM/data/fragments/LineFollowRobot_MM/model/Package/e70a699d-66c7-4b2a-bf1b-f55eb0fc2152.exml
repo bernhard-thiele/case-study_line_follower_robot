@@ -1910,7 +1910,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Base">
-                    <ID name="Sensor" mc="Standard.Class" uid="f0e7744d-9ab1-4036-b802-a024e03f8166"/>
+                    <ID name="Sensor2" mc="Standard.Class" uid="fad413db-fcbc-4931-8ca9-41d831935895"/>
                   </LINK>
                   <COMP relation="Part">
                     <OBJECT>
@@ -1930,7 +1930,7 @@
                       <DEPENDENCIES>
                         <LINK relation="RepresentedFeature">
                           <REFOBJ>
-                            <ID name="robot_x" mc="Standard.Port" uid="11d59c5a-3f03-4e22-b866-1b6a4b29f049"/>
+                            <ID name="robot_x" mc="Standard.Port" uid="2a2736ef-6769-42e2-8834-ec0bf68df1a8"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -1952,7 +1952,7 @@
                       <DEPENDENCIES>
                         <LINK relation="RepresentedFeature">
                           <REFOBJ>
-                            <ID name="robot_y" mc="Standard.Port" uid="a1162ca1-39f3-4029-9d2d-e93e1c12d7ca"/>
+                            <ID name="robot_y" mc="Standard.Port" uid="dd01836a-64f5-4893-b7dd-87ba79848f16"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -1974,7 +1974,7 @@
                       <DEPENDENCIES>
                         <LINK relation="RepresentedFeature">
                           <REFOBJ>
-                            <ID name="robot_z" mc="Standard.Port" uid="7000a935-4003-489c-b999-ab28e38443b8"/>
+                            <ID name="robot_z" mc="Standard.Port" uid="63a250e7-1861-4993-ba48-968ed036c540"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -1996,7 +1996,7 @@
                       <DEPENDENCIES>
                         <LINK relation="RepresentedFeature">
                           <REFOBJ>
-                            <ID name="robot_theta" mc="Standard.Port" uid="0f5845db-3646-423a-8c50-62daa410af0e"/>
+                            <ID name="robot_theta" mc="Standard.Port" uid="e28fff76-31ac-4067-ae9b-14be1bf9dc1d"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -2018,7 +2018,7 @@
                       <DEPENDENCIES>
                         <LINK relation="RepresentedFeature">
                           <REFOBJ>
-                            <ID name="lf_1_sensor_reading" mc="Standard.Port" uid="2e1eae10-0296-4547-8b93-c6c049a786bf"/>
+                            <ID name="lf_1_sensor_reading" mc="Standard.Port" uid="1026490d-055d-430a-a727-fbaedcd4d38e"/>
                           </REFOBJ>
                         </LINK>
                         <COMP relation="OwnedEnd">
@@ -3301,7 +3301,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Base">
-                    <ID name="Sensor" mc="Standard.Class" uid="f0e7744d-9ab1-4036-b802-a024e03f8166"/>
+                    <ID name="Sensor2" mc="Standard.Class" uid="fad413db-fcbc-4931-8ca9-41d831935895"/>
                   </LINK>
                   <COMP relation="Part">
                     <OBJECT>
@@ -3321,7 +3321,7 @@
                       <DEPENDENCIES>
                         <LINK relation="RepresentedFeature">
                           <REFOBJ>
-                            <ID name="robot_x" mc="Standard.Port" uid="11d59c5a-3f03-4e22-b866-1b6a4b29f049"/>
+                            <ID name="robot_x" mc="Standard.Port" uid="2a2736ef-6769-42e2-8834-ec0bf68df1a8"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -3343,7 +3343,7 @@
                       <DEPENDENCIES>
                         <LINK relation="RepresentedFeature">
                           <REFOBJ>
-                            <ID name="robot_y" mc="Standard.Port" uid="a1162ca1-39f3-4029-9d2d-e93e1c12d7ca"/>
+                            <ID name="robot_y" mc="Standard.Port" uid="dd01836a-64f5-4893-b7dd-87ba79848f16"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -3365,7 +3365,7 @@
                       <DEPENDENCIES>
                         <LINK relation="RepresentedFeature">
                           <REFOBJ>
-                            <ID name="robot_z" mc="Standard.Port" uid="7000a935-4003-489c-b999-ab28e38443b8"/>
+                            <ID name="robot_z" mc="Standard.Port" uid="63a250e7-1861-4993-ba48-968ed036c540"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -3387,7 +3387,7 @@
                       <DEPENDENCIES>
                         <LINK relation="RepresentedFeature">
                           <REFOBJ>
-                            <ID name="robot_theta" mc="Standard.Port" uid="0f5845db-3646-423a-8c50-62daa410af0e"/>
+                            <ID name="robot_theta" mc="Standard.Port" uid="e28fff76-31ac-4067-ae9b-14be1bf9dc1d"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -3409,7 +3409,7 @@
                       <DEPENDENCIES>
                         <LINK relation="RepresentedFeature">
                           <REFOBJ>
-                            <ID name="lf_1_sensor_reading" mc="Standard.Port" uid="2e1eae10-0296-4547-8b93-c6c049a786bf"/>
+                            <ID name="lf_1_sensor_reading" mc="Standard.Port" uid="1026490d-055d-430a-a727-fbaedcd4d38e"/>
                           </REFOBJ>
                         </LINK>
                         <COMP relation="OwnedEnd">
@@ -3664,6 +3664,7 @@
         <COMPID name="Sensor" mc="Standard.Class" uid="f0e7744d-9ab1-4036-b802-a024e03f8166"/>
         <COMPID name="Controller" mc="Standard.Class" uid="6dd3b097-cd33-439a-b909-16e1eb67a5a9"/>
         <COMPID name="3DVisualisation" mc="Standard.Class" uid="c55a2d6f-a5ff-4fd9-8733-25fb05ff21fb"/>
+        <COMPID name="Sensor2" mc="Standard.Class" uid="fad413db-fcbc-4931-8ca9-41d831935895"/>
       </COMP>
       <COMP relation="Product">
         <COMPID name="Architecture diagram" mc="Standard.ClassDiagram" uid="4a39c167-de97-402e-8caa-aa082fa034fa"/>

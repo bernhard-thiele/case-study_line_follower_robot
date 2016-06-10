@@ -204,6 +204,9 @@
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="Sensor" mc="Standard.Class" uid="3c2f04ab-d373-4e47-8c5f-28036cec118e"/>
+      </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="EComponent" mc="Standard.Stereotype" uid="b988949d-fefe-4623-b48e-8161edb603f7"/>
         <FOREIGNID name="Subsystem" mc="Standard.Stereotype" uid="50d159b2-4d32-40ad-8990-c686943cb1f3"/>
