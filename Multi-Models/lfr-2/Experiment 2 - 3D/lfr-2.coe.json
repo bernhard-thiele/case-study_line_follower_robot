@@ -1,5 +1,5 @@
 {
-		"multimodel_path":"Multi-models/lfr-1/lfr-2.mm.json",
+		"multimodel_path":"Multi-models/lfr-2/lfr-2.mm.json",
 		"algorithm":{
 				"type":"fixed-step",
 				"size":0.005
