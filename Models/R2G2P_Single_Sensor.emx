@@ -7,15 +7,15 @@
     <Version>4.6</Version>
 <IsMainModel>0</IsMainModel>
   <KeepParameterValues>False</KeepParameterValues>
-    <LibraryPath>C:\Users\ncjg5\Documents\projects\into-cps\svn\WP3\T3_5_Pilot_Studies\Line Follow Robot\INTO-CPS\Models\20_sim_fragments\R2G2P_Single_Sensor.emx</LibraryPath>
-  <TimeStamp>2016-6-10 14:43:48</TimeStamp>
+    <LibraryPath>C:\Users\Richard\Documents\INTO-CPS\INTO Git\case-study_line_follower_robot\Models\R2G2P_Single_Sensor.emx</LibraryPath>
+  <TimeStamp>2016-8-2 10:46:18</TimeStamp>
 </Description>
 </Information>';
  type Mainmodel
  end;
  implementation bg
   submodels
-   Sensor_Block 216.9 72
+   Sensor_Block_Rep 215.6 72
     description '<Information><Description><Version>4.5</Version><IsMainModel>1</IsMainModel><KeepParameterValues>False</KeepParameterValues><AllowLibraryUpdate>True</AllowLibraryUpdate><Configuration><struct><member><name>DocumentationMask</name><value><struct></struct></value></member></struct></Configuration></Description></Information>';
     type Submodel
      ports
@@ -29,20 +29,20 @@
     end;
     icon bg right shadow 11776947
      figures
-      rectangle 132.3 48 301.6 96 color 0 fill 15132390;
-      text 'name' 182.9 80 color 0 16;
+      rectangle 130.6 48 302.2 96 color 0 fill 15132390;
+      text 'name' 181.9 80 color 0 16;
      terminals
       robot_x 256 96 fixed;
-      robot_y 264 96 fixed;
-      robot_z 272 96 fixed;
-      robot_theta 280 96 fixed;
-      lf_1_sensor_reading 132.3 56 fixed;
-      lf_1_sensor_position_x 144 96 fixed;
-      lf_1_sensor_position_y 152 96 fixed;
+      robot_y 264.1 96 fixed;
+      robot_z 272.2 96 fixed;
+      robot_theta 280.3 96 fixed;
+      lf_1_sensor_reading 130.6 56 fixed;
+      lf_1_sensor_position_x 142.4 96 fixed;
+      lf_1_sensor_position_y 150.5 96 fixed;
     end;
     implementation bg
      submodels
-      Demux4 481 224
+      Demux4 482.5 224
 						specifications active 'outputs_2'
 							specification 'default'
 description '<Description>
@@ -1071,7 +1071,7 @@ equations
 implementation_end;
 specification_end;
 						end;
-      Mux 422.5 429
+      Mux 422.5 431
 						specifications active 'inputs_4'
 							specification 'default'
 description '<Description>
@@ -1497,10 +1497,10 @@ z = 0;
  implementation_end;
   end;
   connections
-   Submodel2\theta -> Sensor_Block\robot_theta;
-   Submodel2\x -> Sensor_Block\robot_x;
-   Submodel2\y -> Sensor_Block\robot_y;
-   Submodel2\z -> Sensor_Block\robot_z;
+   Submodel2\theta -> Sensor_Block_Rep\robot_theta;
+   Submodel2\x -> Sensor_Block_Rep\robot_x;
+   Submodel2\y -> Sensor_Block_Rep\robot_y;
+   Submodel2\z -> Sensor_Block_Rep\robot_z;
   end;
  implementation_end;
 ]]>
@@ -1516,7 +1516,7 @@ z = 0;
 <ExpData>
   <VersionNumber>4.6</VersionNumber>
   <ModelProperties>
-    <ModelProperty section="CCodeDialog" entry="SubmodelName" value="Sensor_Block"/>
+    <ModelProperty section="CCodeDialog" entry="SubmodelName" value="Sensor_Block_Rep"/>
     <ModelProperty section="CCodeDialog" entry="TargetName" value="FMU 2.0 export for 20-sim submodel (GitHub)"/>
     <ModelProperty section="CCodeDialog" entry="TargetDirectory" value="c:\temp\%SUBMODEL_NAME%"/>
   </ModelProperties>
@@ -1537,11 +1537,11 @@ z = 0;
     <VarName>time</VarName>
     <VarName>Submodel2\x</VarName>
     <VarName>Submodel2\y</VarName>
-    <VarName>Sensor_Block\lf_1_sensor_reading</VarName>
-    <VarName>Sensor_Block\robot_x</VarName>
-    <VarName>Sensor_Block\robot_y</VarName>
-    <VarName>Sensor_Block\lf_1_sensor_position_x</VarName>
-    <VarName>Sensor_Block\lf_1_sensor_position_y</VarName>
+    <VarName>Sensor_Block_Rep\lf_1_sensor_reading</VarName>
+    <VarName>Sensor_Block_Rep\robot_x</VarName>
+    <VarName>Sensor_Block_Rep\robot_y</VarName>
+    <VarName>Sensor_Block_Rep\lf_1_sensor_position_x</VarName>
+    <VarName>Sensor_Block_Rep\lf_1_sensor_position_y</VarName>
    </VarNames>
    <Plots>
     <Plot>
@@ -1637,7 +1637,7 @@ z = 0;
        </XCurveData>
        <YCurveData>
         <ShowUnit>true</ShowUnit>
-        <VarName>Sensor_Block\lf_1_sensor_reading</VarName>
+        <VarName>Sensor_Block_Rep\lf_1_sensor_reading</VarName>
        </YCurveData>
       </Curve>
      </Curves>
@@ -1734,11 +1734,11 @@ z = 0;
        <ShowYValues>true</ShowYValues>
        <XCurveData>
         <ShowUnit>true</ShowUnit>
-        <VarName>Sensor_Block\robot_x</VarName>
+        <VarName>Sensor_Block_Rep\robot_x</VarName>
        </XCurveData>
        <YCurveData>
         <ShowUnit>true</ShowUnit>
-        <VarName>Sensor_Block\robot_y</VarName>
+        <VarName>Sensor_Block_Rep\robot_y</VarName>
        </YCurveData>
       </Curve>
      </Curves>
@@ -1839,7 +1839,7 @@ z = 0;
        </XCurveData>
        <YCurveData>
         <ShowUnit>true</ShowUnit>
-        <VarName>Sensor_Block\lf_1_sensor_reading</VarName>
+        <VarName>Sensor_Block_Rep\lf_1_sensor_reading</VarName>
        </YCurveData>
       </Curve>
      </Curves>
@@ -1940,7 +1940,7 @@ z = 0;
        </XCurveData>
        <YCurveData>
         <ShowUnit>true</ShowUnit>
-        <VarName>Sensor_Block\lf_1_sensor_reading</VarName>
+        <VarName>Sensor_Block_Rep\lf_1_sensor_reading</VarName>
        </YCurveData>
       </Curve>
      </Curves>
@@ -2923,11 +2923,11 @@ z = 0;
       <Name>Reference Frame</Name>
       <Position>
        <X>
-        <VariableName>Sensor_Block\lf_1_sensor_position_x</VariableName>
+        <VariableName>Sensor_Block_Rep\lf_1_sensor_position_x</VariableName>
         <Value>-0.396514179372352</Value>
        </X>
        <Y>
-        <VariableName>Sensor_Block\lf_1_sensor_position_y</VariableName>
+        <VariableName>Sensor_Block_Rep\lf_1_sensor_position_y</VariableName>
         <Value>-0.054618803708328</Value>
        </Y>
       </Position>
@@ -2968,15 +2968,15 @@ z = 0;
         <OverrideColor>true</OverrideColor>
         <MeshColor>
          <X>
-     <VariableName>Sensor_Block\lf_1_sensor_reading</VariableName>
+     <VariableName>Sensor_Block_Rep\lf_1_sensor_reading</VariableName>
      <Value>254</Value>
          </X>
          <Y>
-     <VariableName>Sensor_Block\lf_1_sensor_reading</VariableName>
+     <VariableName>Sensor_Block_Rep\lf_1_sensor_reading</VariableName>
      <Value>254</Value>
          </Y>
          <Z>
-     <VariableName>Sensor_Block\lf_1_sensor_reading</VariableName>
+     <VariableName>Sensor_Block_Rep\lf_1_sensor_reading</VariableName>
      <Value>254</Value>
          </Z>
         </MeshColor>
@@ -3091,11 +3091,11 @@ z = 0;
       <UseLookatPosition>true</UseLookatPosition>
       <LookatPosition>
        <X>
-        <VariableName>Sensor_Block\lf_1_sensor_position_x</VariableName>
+        <VariableName>Sensor_Block_Rep\lf_1_sensor_position_x</VariableName>
         <Value>-0.396514179372352</Value>
        </X>
        <Y>
-        <VariableName>Sensor_Block\lf_1_sensor_position_y</VariableName>
+        <VariableName>Sensor_Block_Rep\lf_1_sensor_position_y</VariableName>
         <Value>-0.054618803708328</Value>
        </Y>
       </LookatPosition>
@@ -3132,7 +3132,7 @@ z = 0;
     </PlotPanel>
     <PlotPanel>
      <PlotPanelId>2</PlotPanelId>
-     <PlotPanelVisible>true</PlotPanelVisible>
+     <PlotPanelVisible>false</PlotPanelVisible>
      <Name>Window 2</Name>
      <Tiling>0</Tiling>
      <PlotIds>
@@ -3141,12 +3141,12 @@ z = 0;
      <ToggleState>Base</ToggleState>
     </PlotPanel>
    </PlotPanels>
-   <WindowRectangles virtualDesktopWidth="4267" virtualDesktopHeight="1440">
+   <WindowRectangles virtualDesktopWidth="5120" virtualDesktopHeight="1846">
      <WindowRectangle monitor="0" left="0" top="0" right="2560" bottom="1440" plotpanelid="1">
 0.360547 0.488889 0.809375 1.02708
      </WindowRectangle>
      <WindowRectangle monitor="0" left="0" top="0" right="2560" bottom="1440" plotpanelid="2">
-0.0957031 0.161111 0.503125 0.619444
+0.0957031 0.159722 0.503125 0.619444
      </WindowRectangle>
    </WindowRectangles>
   </PlotSpecs>
@@ -3292,9 +3292,6 @@ z = 0;
   </ExportData>
   <BreakPoints>
   </BreakPoints>
-  <AnimationPlayback>
-   <PlaybackSpeed>1</PlaybackSpeed>
-  </AnimationPlayback>
 </ExpData>
   </Experiment>
 </Experiments>
