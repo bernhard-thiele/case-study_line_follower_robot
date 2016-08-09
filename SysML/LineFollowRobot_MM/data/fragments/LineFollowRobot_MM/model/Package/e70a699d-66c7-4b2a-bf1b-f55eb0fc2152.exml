@@ -919,7 +919,7 @@
                       <DEPENDENCIES>
                         <LINK relation="RepresentedFeature">
                           <REFOBJ>
-                            <ID name="input1" mc="Standard.Port" uid="8f555574-e7ee-4043-9d65-c126b10a4d4b"/>
+                            <ID name="lfLeftVal" mc="Standard.Port" uid="8f555574-e7ee-4043-9d65-c126b10a4d4b"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -941,7 +941,7 @@
                       <DEPENDENCIES>
                         <LINK relation="RepresentedFeature">
                           <REFOBJ>
-                            <ID name="input2" mc="Standard.Port" uid="d2138a8a-d241-4a35-8e00-15e64009c071"/>
+                            <ID name="lfRightVal" mc="Standard.Port" uid="d2138a8a-d241-4a35-8e00-15e64009c071"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -1910,7 +1910,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Base">
-                    <ID name="Sensor2" mc="Standard.Class" uid="fad413db-fcbc-4931-8ca9-41d831935895"/>
+                    <ID name="Sensor" mc="Standard.Class" uid="f0e7744d-9ab1-4036-b802-a024e03f8166"/>
                   </LINK>
                   <COMP relation="Part">
                     <OBJECT>
@@ -2179,7 +2179,7 @@
                       <DEPENDENCIES>
                         <LINK relation="RepresentedFeature">
                           <REFOBJ>
-                            <ID name="input1" mc="Standard.Port" uid="8f555574-e7ee-4043-9d65-c126b10a4d4b"/>
+                            <ID name="lfLeftVal" mc="Standard.Port" uid="8f555574-e7ee-4043-9d65-c126b10a4d4b"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -2347,7 +2347,7 @@
                       <DEPENDENCIES>
                         <LINK relation="RepresentedFeature">
                           <REFOBJ>
-                            <ID name="input2" mc="Standard.Port" uid="d2138a8a-d241-4a35-8e00-15e64009c071"/>
+                            <ID name="lfRightVal" mc="Standard.Port" uid="d2138a8a-d241-4a35-8e00-15e64009c071"/>
                           </REFOBJ>
                         </LINK>
                       </DEPENDENCIES>
@@ -3301,7 +3301,7 @@
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Base">
-                    <ID name="Sensor2" mc="Standard.Class" uid="fad413db-fcbc-4931-8ca9-41d831935895"/>
+                    <ID name="Sensor" mc="Standard.Class" uid="f0e7744d-9ab1-4036-b802-a024e03f8166"/>
                   </LINK>
                   <COMP relation="Part">
                     <OBJECT>

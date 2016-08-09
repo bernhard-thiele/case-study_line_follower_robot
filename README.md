@@ -15,7 +15,16 @@ The robot moves through a number of phases as it follows a line. At the start of
 
 The multi-model architecture, defined in the INTO-CPS SysML profile, splits the original model into three subsystems, as shown in  the Architecture Structure Diagram. This version comprises *Body* and *Sensor* subsystems and a *Controller* cyber component. The *Body* subsystem, with a target platform as 20-sim as a CT model, comprises the Body, Encoder, Wheel and Motor components. The *Sensor* subsystem contains only Sensor components. The *Controller* component remains the same as the original SysML model. 
 
-Connections are made between the different subsystems, and the underlying components realising the source and destination of values.
+![Architecture Structure Diagram](resources/r2g2p_asd.png?raw=true "Architecture Structure Diagram")
+
+Connections are made between the different subsystems, and the underlying components realising the source and destination of values. Two connection diagrams are defined for two block instances *robot2sensor* and *3DRobot*. The first, shown below connects the controller, body and sensor instances:
+
+![Connection Diagram 1](resources/r2g2p_cd.png?raw=true "Connection Diagram")
+
+The second block instance, *3DRobot*, includes a 3DVisualisation block. The other connections remain the same as in the  *robot2sensor* instance.
+
+![Connection Diagram 2](resources/r2g2p_cd_vis.png?raw=true "Connection Diagram")
+
 
 ### Models 
 
@@ -57,16 +66,17 @@ The final collection of connections are only present in the *lfr-2* multi-model,
 
 ### Co-simulation
 
-For both the *lfr-1* and *lfr-2* multi-models, co-simulations require approximately 25-30 seconds of simulation to traverse the full map, using a step size of 0.01 seconds.
+For both the *lfr-1* and *lfr-2* multi-models, co-simulations require approximately 25-30 seconds of simulation to traverse the full map, using a step size of 0.01 seconds. 
 
 ### Analyses and Experiments
 
 Below we detail some useful experiments to demonstrate features of the INTO-CPS tool chain.
 
+#### Change FMUs/parameters
 
-#### Change controller/sensors
+The case study has several Sensor FMUs. In the multi-model configuration it is possible to swap the FMU allocated to each sensor instance of the multi-model. We can therefore compare the results of co-simulation using 20-sim sensors (*Sensor_Block.fmu*) for OpenModelica sensors (**), or a combination of the two. 
 
-The case study has several Sensor FMUs. In the multi-model configuration it is possible to swap the FMU allocated to each sensor instance of the multi-model. We can therefore compare the results of co-simulation using 20-sim sensors (*Sensor_Block.fmu* and *Sensor_Block_02.fmu*) for OpenModelica sensors (** and **), or a combination of the two.
+In addition, there are parameters defined for the two sensors: an x and y position **lf_position_x** and **lf_position_y**. Experiments may be carried out by defining different values for these to model different placement of the sensors on the robot. 
 
 #### Simulations due to previous results 
 
