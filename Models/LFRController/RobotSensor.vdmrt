@@ -2,14 +2,14 @@ class RobotSensor
 
 instance variables
 
-port : RealPort;
+handle : bool->real;
 
 operations
 
-public RobotSensor: RealPort ==> RobotSensor
-RobotSensor(p) == port := p;
+public RobotSensor: bool->real ==> RobotSensor
+RobotSensor(h) == handle := h;
 
 public getReading: () ==> real
-getReading()== return port.getValue();
+getReading()==return handle(true);
 
 end RobotSensor
