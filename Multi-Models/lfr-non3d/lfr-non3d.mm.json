@@ -1,7 +1,7 @@
 {
 	"fmus":{
 		"{controllerFMU}":"LFRController.fmu",
-		"{sensor1FMU}":"Sensor_Block.fmu",
+		"{sensor1FMU}":"Sensor_Block_01.fmu",
 		"{sensor2FMU}":"Sensor_Block_02.fmu",
 		"{bodyFMU}":"Body_Block.fmu"
 	},
