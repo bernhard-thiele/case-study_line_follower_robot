@@ -1,1 +1,0 @@
-{"startTime":0,"endTime":40,"multimodel_path":"Multi-models/lfr-non3d-rep-dse/lfr-non3d-rep-dse.mm.json","livestream":{"{bodyFMU}.body":["total_energy_used"]},"algorithm":{"type":"fixed-step","size":0.01}}
