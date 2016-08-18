@@ -13,12 +13,16 @@
 		"{sensorFMU}.sensor1.lf_1_sensor_reading":["{controllerFMU}.controller.lfLeftVal","{3DFMU}.3D.animation.sensor.lf.left.reading"],
 		"{sensorFMU}.sensor2.lf_1_sensor_reading":["{controllerFMU}.controller.lfRightVal","{3DFMU}.3D.animation.sensor.lf.right.reading"],
 		"{controllerFMU}.controller.servoRightVal":["{bodyFMU}.body.servo_right_input"],
-		"{controllerFMU}.controller.servoLeftVal":["{bodyFMU}.body.servo_left_input"]	
+		"{controllerFMU}.controller.servoLeftVal":["{bodyFMU}.body.servo_left_input"],
+		"{bodyFMU}.body.total_energy_used":["{controllerFMU}.controller.total_energy_used"]	
 	},
 	"parameters":{
 		"{sensorFMU}.sensor1.lf_position_x":0.01,
 		"{sensorFMU}.sensor1.lf_position_y":0.065,
 		"{sensorFMU}.sensor2.lf_position_x":-0.01,
-		"{sensorFMU}.sensor2.lf_position_y":0.065
+		"{sensorFMU}.sensor2.lf_position_y":0.065,
+		"{controllerFMU}.controller.forwardSpeed":0.4,
+		"{controllerFMU}.controller.forwardRotate":0.5,
+		"{controllerFMU}.controller.backwardRotate":0.1
 	}
 }

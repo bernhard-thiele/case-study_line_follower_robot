@@ -22,20 +22,20 @@ operations
 	
 		if (sensorRightVal.getReading() < 150 and sensorLeftVal.getReading() < 150)
 		then (
-			servoRight.setServo(-0.4);--sensorRight.getReading());---0.4);
-			servoLeft.setServo(0.4);--sensorLeft.getReading());--0.4);
+			servoRight.setServo(-HardwareInterface`forwardSpeed.getValue());
+			servoLeft.setServo(HardwareInterface`forwardSpeed.getValue());
 		);
 		
 		if (sensorRightVal.getReading() < 150 and sensorLeftVal.getReading() > 150)
 		then (
-			servoRight.setServo(-0.5);--sensorRight.getReading());---0.5);
-			servoLeft.setServo(0.1);--sensorLeft.getReading());--0.1);
+			servoRight.setServo(-(HardwareInterface`forwardRotate.getValue()));
+			servoLeft.setServo(HardwareInterface`backwardRotate.getValue());
 		);
 		
 		if (sensorRightVal.getReading() > 150 and sensorLeftVal.getReading() < 150)
 		then (
-			servoRight.setServo(-0.1);--sensorRight.getReading());---0.1);
-			servoLeft.setServo(0.5);--sensorLeft.getReading());--0.5);
+			servoRight.setServo(-(HardwareInterface`backwardRotate.getValue()));
+			servoLeft.setServo(HardwareInterface`forwardRotate.getValue());
 		);
 
 		if (sensorRightVal.getReading() > 150 and sensorLeftVal.getReading() > 150)
