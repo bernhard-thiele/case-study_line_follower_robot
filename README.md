@@ -11,7 +11,7 @@ The robot moves through a number of phases as it follows a line. At the start of
 
 ## Example Artefacts Overview
 
-The example is available at https://github.com/into-cps/case-study_line_follower_robot in the master* branch. There are several subfolders for the various elements: DSEs - contains various work in progress DSE scripts to alter CT and DE parameters ; FCU - contains the various FMUs of the study; Models - contains the constituent models defined using the INTO-CPS simulation technologies; Multi-models - contains the multi-model definitions and co-simulation configurations - with 3D and non-3D options, and also with and without the use of replicated FMUs; SysML - contains the SysML models defined for the study; resources - various images for the purposes of this readme file; and userMetricScripts - contains files for DSE analysis. 
+The example is available at https://github.com/into-cps/case-study_line_follower_robot in the *master* branch. There are several subfolders for the various elements: DSEs - contains various work in progress DSE scripts to alter CT and DE parameters ; FCU - contains the various FMUs of the study; Models - contains the constituent models defined using the INTO-CPS simulation technologies; Multi-models - contains the multi-model definitions and co-simulation configurations - with 3D and non-3D options, and also with and without the use of replicated FMUs; SysML - contains the SysML models defined for the study; resources - various images for the purposes of this readme file; and userMetricScripts - contains files for DSE analysis. 
 
 The case-study_line_follower_robot folder can be opened in the INTO-CPS application to run the various co-simulations as detailed in this document.
 
