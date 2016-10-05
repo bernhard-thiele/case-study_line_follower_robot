@@ -8,8 +8,14 @@ This example, originally developed in the DESTECS project. The model simulates a
 
 The robot moves through a number of phases as it follows a line. At the start of each line is a specific pattern that will be known in advance. Once a genuine line is detected on the ground, the robot follows it until it detects that the end of the line has been reached, when it should go to an idle state. 
 
-## INTO-CPS Technology
 
+## Example Artefacts Overview
+
+The example is available at https://github.com/into-cps/case-study_line_follower_robot in the master* branch. There are several subfolders for the various elements: DSEs - contains various work in progress DSE scripts to alter CT and DE parameters ; FCU - contains the various FMUs of the study; Models - contains the constituent models defined using the INTO-CPS simulation technologies; Multi-models - contains the multi-model definitions and co-simulation configurations - with 3D and non-3D options, and also with and without the use of replicated FMUs; SysML - contains the SysML models defined for the study; resources - various images for the purposes of this readme file; and userMetricScripts - contains files for DSE analysis. 
+
+The case-study_line_follower_robot folder can be opened in the INTO-CPS application to run the various co-simulations as detailed in this document.
+
+## INTO-CPS Technology
 
 ### INTO SysML profile
 
@@ -74,7 +80,7 @@ Below we detail some useful experiments to demonstrate features of the INTO-CPS 
 
 #### Change FMUs/parameters
 
-The case study has several Sensor FMUs. In the multi-model configuration it is possible to swap the FMU allocated to each sensor instance of the multi-model. We can therefore compare the results of co-simulation using 20-sim sensors (*Sensor_Block.fmu*) for OpenModelica sensors (**), or a combination of the two. 
+The case study has several Sensor FMUs. In the multi-model configuration it is possible to swap the FMU allocated to each sensor instance of the multi-model. We can therefore compare the results of co-simulation using 20-sim sensors (*Sensor_Block.fmu*) for OpenModelica sensors (**To appear**), or a combination of the two. 
 
 In addition, there are parameters defined for the two sensors: an x and y position **lf_position_x** and **lf_position_y**. Experiments may be carried out by defining different values for these to model different placement of the sensors on the robot. 
 
