@@ -17,8 +17,6 @@ instance variables
   public static rightVal : RealPort := new RealPort(0.0);
   -- @ interface: type = input, name="total_energy_used";
   public static total_energy_used : RealPort := new RealPort(0.0);
-
- 
   
 instance variables
 
