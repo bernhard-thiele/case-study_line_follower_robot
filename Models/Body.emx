@@ -7273,6 +7273,9 @@ variables
 	real dllvalue;
 initialequations
 	id = dll (dll_name, initialize_function_name, path_follow_file_name);
+	if (id == -1) then
+		stopsimulation('Could not read the file in Table2D');
+	end;
 	for i = 0 to sample_matrix_size-1 do
 		sample_offsets[i+1] = (i - ((sample_matrix_size-1)/2)) * sample_matrix_scale;
 	end;
@@ -13140,6 +13143,10 @@ variables
 	real dllvalue;
 initialequations
 	id = dll (dll_name, initialize_function_name, path_follow_file_name);
+	if (id == -1) then
+		stopsimulation('Could not read the file in Table2D');
+	end;
+
 	for i = 0 to sample_matrix_size-1 do
 		sample_offsets[i+1] = (i - ((sample_matrix_size-1)/2)) * sample_matrix_scale;
 	end;
