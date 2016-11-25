@@ -7252,61 +7252,68 @@ constants
 	string function_name = 'TableRead';
 parameters
 	string path_follow_file_name = 'map.txt';
-   integer sample_matrix_size = 3;
-   real sample_matrix_scale = 0.001;
+	integer sample_matrix_size = 3;
+	real sample_matrix_scale = 0.001;
 variables
 	real id;
-   real input1[3];
-   real input2[3];
+	real input1[3];
+	real input2[3];
 	real input3[3];
 	real input4[3];
 	real input5[3];
-   real sample_offsets[sample_matrix_size];
-   integer i;
-   real sample_matrix1[sample_matrix_size,sample_matrix_size];
-   real sample_matrix2[sample_matrix_size,sample_matrix_size];
-   real sample_matrix3[sample_matrix_size,sample_matrix_size];
-   real sample_matrix4[sample_matrix_size,sample_matrix_size];
-   real sample_matrix5[sample_matrix_size,sample_matrix_size];
-   integer x1,y1;
-   real sensor_field_width;
+	real sample_offsets[sample_matrix_size];
+	integer i;
+	real sample_matrix1[sample_matrix_size,sample_matrix_size];
+	real sample_matrix2[sample_matrix_size,sample_matrix_size];
+	real sample_matrix3[sample_matrix_size,sample_matrix_size];
+	real sample_matrix4[sample_matrix_size,sample_matrix_size];
+	real sample_matrix5[sample_matrix_size,sample_matrix_size];
+	integer x1,y1;
+	real sensor_field_width;
+	real dllvalue;
 initialequations
 	id = dll (dll_name, initialize_function_name, path_follow_file_name);
-   for i = 0 to sample_matrix_size-1 do
-      sample_offsets[i+1] = (i - ((sample_matrix_size-1)/2)) * sample_matrix_scale;
-   end;
-   sensor_field_width = sample_matrix_size * sample_matrix_scale;
+	for i = 0 to sample_matrix_size-1 do
+		sample_offsets[i+1] = (i - ((sample_matrix_size-1)/2)) * sample_matrix_scale;
+	end;
+	sensor_field_width = sample_matrix_size * sample_matrix_scale;
+	dllvalue = 0;
 equations
-   for x1 = 1 to sample_matrix_size do
-      for y1 = 1 to sample_matrix_size do
+	for x1 = 1 to sample_matrix_size do
+		for y1 = 1 to sample_matrix_size do
 			// sensor 1
-         input1[1] = id;
-         input1[2] = sensor_position1[2] + sample_offsets[x1];
-         input1[3] = sensor_position1[1] + sample_offsets[y1];
-         sample_matrix1[x1,y1] = dll(dll_name, function_name, input1);
+			input1[1] = id;
+			input1[2] = sensor_position1[2] + sample_offsets[x1];
+			input1[3] = sensor_position1[1] + sample_offsets[y1];
+			dllvalue = dll(dll_name, function_name, input1);
+			sample_matrix1[x1,y1] = dllvalue;
 			// sensor 2
 			input2[1] = id;
-         input2[2] = sensor_position2[2] + sample_offsets[x1];
-         input2[3] = sensor_position2[1] + sample_offsets[y1];
-         sample_matrix2[x1,y1] = dll(dll_name, function_name, input2);
+			input2[2] = sensor_position2[2] + sample_offsets[x1];
+			input2[3] = sensor_position2[1] + sample_offsets[y1];
+			dllvalue = dll(dll_name, function_name, input2);
+			sample_matrix2[x1,y1] = dllvalue;
 			// sensor 3
 			input3[1] = id;
-         input3[2] = sensor_position3[2] + sample_offsets[x1];
-         input3[3] = sensor_position3[1] + sample_offsets[y1];
-         sample_matrix3[x1,y1] = dll(dll_name, function_name, input3);
+			input3[2] = sensor_position3[2] + sample_offsets[x1];
+			input3[3] = sensor_position3[1] + sample_offsets[y1];
+			dllvalue = dll(dll_name, function_name, input3);
+			sample_matrix3[x1,y1] = dllvalue;
 			// sensor 4
 			input4[1] = id;
-         input4[2] = sensor_position4[2] + sample_offsets[x1];
-         input4[3] = sensor_position4[1] + sample_offsets[y1];
-         sample_matrix4[x1,y1] = dll(dll_name, function_name, input4);
+			input4[2] = sensor_position4[2] + sample_offsets[x1];
+			input4[3] = sensor_position4[1] + sample_offsets[y1];
+			dllvalue = dll(dll_name, function_name, input4);
+			sample_matrix4[x1,y1] = dllvalue;
 			// sensor 5
 			input5[1] = id;
-         input5[2] = sensor_position5[2] + sample_offsets[x1];
-         input5[3] = sensor_position5[1] + sample_offsets[y1];
-         sample_matrix5[x1,y1] = dll(dll_name, function_name, input5);
-      end; 
-   end;
-   sensor_value1 = msum(sample_matrix1) / sample_matrix_size^2;
+			input5[2] = sensor_position5[2] + sample_offsets[x1];
+			input5[3] = sensor_position5[1] + sample_offsets[y1];
+			dllvalue = dll(dll_name, function_name, input5);
+			sample_matrix5[x1,y1] = dllvalue;
+		end;
+	end;
+	sensor_value1 = msum(sample_matrix1) / sample_matrix_size^2;
 	sensor_value2 = msum(sample_matrix2) / sample_matrix_size^2;
 	sensor_value3 = msum(sample_matrix3) / sample_matrix_size^2;
 	sensor_value4 = msum(sample_matrix4) / sample_matrix_size^2;
@@ -13112,61 +13119,68 @@ constants
 	string function_name = 'TableRead';
 parameters
 	string path_follow_file_name = 'map.txt';
-   integer sample_matrix_size = 3;
-   real sample_matrix_scale = 0.001;
+	integer sample_matrix_size = 3;
+	real sample_matrix_scale = 0.001;
 variables
 	real id;
-   real input1[3];
-   real input2[3];
+	real input1[3];
+	real input2[3];
 	real input3[3];
 	real input4[3];
 	real input5[3];
-   real sample_offsets[sample_matrix_size];
-   integer i;
-   real sample_matrix1[sample_matrix_size,sample_matrix_size];
-   real sample_matrix2[sample_matrix_size,sample_matrix_size];
-   real sample_matrix3[sample_matrix_size,sample_matrix_size];
-   real sample_matrix4[sample_matrix_size,sample_matrix_size];
-   real sample_matrix5[sample_matrix_size,sample_matrix_size];
-   integer x1,y1;
-   real sensor_field_width;
+	real sample_offsets[sample_matrix_size];
+	integer i;
+	real sample_matrix1[sample_matrix_size,sample_matrix_size];
+	real sample_matrix2[sample_matrix_size,sample_matrix_size];
+	real sample_matrix3[sample_matrix_size,sample_matrix_size];
+	real sample_matrix4[sample_matrix_size,sample_matrix_size];
+	real sample_matrix5[sample_matrix_size,sample_matrix_size];
+	integer x1,y1;
+	real sensor_field_width;
+	real dllvalue;
 initialequations
 	id = dll (dll_name, initialize_function_name, path_follow_file_name);
-   for i = 0 to sample_matrix_size-1 do
-      sample_offsets[i+1] = (i - ((sample_matrix_size-1)/2)) * sample_matrix_scale;
-   end;
-   sensor_field_width = sample_matrix_size * sample_matrix_scale;
+	for i = 0 to sample_matrix_size-1 do
+		sample_offsets[i+1] = (i - ((sample_matrix_size-1)/2)) * sample_matrix_scale;
+	end;
+	sensor_field_width = sample_matrix_size * sample_matrix_scale;
+	dllvalue = 0;
 equations
-   for x1 = 1 to sample_matrix_size do
-      for y1 = 1 to sample_matrix_size do
+	for x1 = 1 to sample_matrix_size do
+		for y1 = 1 to sample_matrix_size do
 			// sensor 1
-         input1[1] = id;
-         input1[2] = sensor_position1[2] + sample_offsets[x1];
-         input1[3] = sensor_position1[1] + sample_offsets[y1];
-         sample_matrix1[x1,y1] = dll(dll_name, function_name, input1);
+			input1[1] = id;
+			input1[2] = sensor_position1[2] + sample_offsets[x1];
+			input1[3] = sensor_position1[1] + sample_offsets[y1];
+			dllvalue = dll(dll_name, function_name, input1);
+			sample_matrix1[x1,y1] = dllvalue;
 			// sensor 2
 			input2[1] = id;
-         input2[2] = sensor_position2[2] + sample_offsets[x1];
-         input2[3] = sensor_position2[1] + sample_offsets[y1];
-         sample_matrix2[x1,y1] = dll(dll_name, function_name, input2);
+			input2[2] = sensor_position2[2] + sample_offsets[x1];
+			input2[3] = sensor_position2[1] + sample_offsets[y1];
+			dllvalue = dll(dll_name, function_name, input2);
+			sample_matrix2[x1,y1] = dllvalue;
 			// sensor 3
 			input3[1] = id;
-         input3[2] = sensor_position3[2] + sample_offsets[x1];
-         input3[3] = sensor_position3[1] + sample_offsets[y1];
-         sample_matrix3[x1,y1] = dll(dll_name, function_name, input3);
+			input3[2] = sensor_position3[2] + sample_offsets[x1];
+			input3[3] = sensor_position3[1] + sample_offsets[y1];
+			dllvalue = dll(dll_name, function_name, input3);
+			sample_matrix3[x1,y1] = dllvalue;
 			// sensor 4
 			input4[1] = id;
-         input4[2] = sensor_position4[2] + sample_offsets[x1];
-         input4[3] = sensor_position4[1] + sample_offsets[y1];
-         sample_matrix4[x1,y1] = dll(dll_name, function_name, input4);
+			input4[2] = sensor_position4[2] + sample_offsets[x1];
+			input4[3] = sensor_position4[1] + sample_offsets[y1];
+			dllvalue = dll(dll_name, function_name, input4);
+			sample_matrix4[x1,y1] = dllvalue;
 			// sensor 5
 			input5[1] = id;
-         input5[2] = sensor_position5[2] + sample_offsets[x1];
-         input5[3] = sensor_position5[1] + sample_offsets[y1];
-         sample_matrix5[x1,y1] = dll(dll_name, function_name, input5);
-      end; 
-   end;
-   sensor_value1 = msum(sample_matrix1) / sample_matrix_size^2;
+			input5[2] = sensor_position5[2] + sample_offsets[x1];
+			input5[3] = sensor_position5[1] + sample_offsets[y1];
+			dllvalue = dll(dll_name, function_name, input5);
+			sample_matrix5[x1,y1] = dllvalue;
+		end;
+	end;
+	sensor_value1 = msum(sample_matrix1) / sample_matrix_size^2;
 	sensor_value2 = msum(sample_matrix2) / sample_matrix_size^2;
 	sensor_value3 = msum(sample_matrix3) / sample_matrix_size^2;
 	sensor_value4 = msum(sample_matrix4) / sample_matrix_size^2;
