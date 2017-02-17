@@ -6,7 +6,7 @@
       <ATT name="LicenseKey">0</ATT>
       <ATT name="MajVersion">3</ATT>
       <ATT name="MinVersion">4</ATT>
-      <ATT name="MinMinVersion"><![CDATA[3]]></ATT>
+      <ATT name="MinMinVersion"><![CDATA[6]]></ATT>
       <ATT name="MinBinVersionCompatibility"></ATT>
       <ATT name="JavaClassName"><![CDATA[com.modeliosoft.modelio.sysml.impl.SysMLModule]]></ATT>
       <ATT name="State">SoModuleStateActivated</ATT>
