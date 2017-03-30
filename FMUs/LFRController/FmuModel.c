@@ -29,6 +29,7 @@
 
 TVP sys = NULL;
 fmi2Boolean syncOutAllowed = fmi2True;
+fmi2Real maxStepSize = 0.0;
 
 
 void syncInputsToModel(){
@@ -172,7 +173,6 @@ fmi2Status vdmStep(fmi2Real currentCommunicationPoint, fmi2Real communicationSte
 	int i, j;
 	int threadRunCount;
 
-
 	//Call each thread the appropriate number of times.
 	for(i = 0;  i < PERIODIC_GENERATED_COUNT; i++)
 	{
@@ -211,11 +211,7 @@ fmi2Status vdmStep(fmi2Real currentCommunicationPoint, fmi2Real communicationSte
 			{
 				syncOutAllowed = fmi2False;
 			}
-		}
-
-			
-		//printf("NOW:  %Lf, TP: %Lf, LE:  %Lf, STEP:  %Lf, SYNC:  %d, RUNS:  %d\n", currentCommunicationPoint / 1E9, threads[i].period / 1E9, threads[i].lastExecuted / 1E9, communicationStepSize / 1E9, syncOutAllowed, threadRunCount);
-		//printf("NOW:  %f, TP: %f, LE:  %f, STEP:  %f, SYNC:  %d, RUNS:  %d\n", currentCommunicationPoint, threads[i].period, threads[i].lastExecuted, communicationStepSize, syncOutAllowed, threadRunCount);
+		}		
 
 		//Execute each thread the number of times that its period fits in the step size.
 		for(j = 0; j < threadRunCount; j++)
@@ -228,6 +224,14 @@ fmi2Status vdmStep(fmi2Real currentCommunicationPoint, fmi2Real communicationSte
 
 		vdm_gc();
 	}
+
+	/* Calculate maximum step size for next step.  Cyclic controllers with no feedback do not have
+	a limit on how large a step they can take.  To be considered in the future for controllers
+	with feedback.
+	*/
+	maxStepSize = INT_MAX * 1.0;
+
+	g_fmiCallbackFunctions->logger((void*) 1, g_fmiInstanceName, fmi2OK, "logDebug", "NOW:  %f, TP: %f, LE:  %f, STEP:  %f, SYNC:  %d, RUNS:  %d\n", currentCommunicationPoint, threads[0].period, threads[0].lastExecuted, communicationStepSize, syncOutAllowed, threadRunCount);
 
 	return fmi2OK;
 }

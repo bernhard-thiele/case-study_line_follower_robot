@@ -42,7 +42,7 @@ static void HardwareInterface_free(struct HardwareInterface *this)
  
 
  static  TVP _Z18fieldInitializer20EV()	{
-/* HardwareInterface.vdmrt 26:39 */
+/* HardwareInterface.vdmrt 28:39 */
 TVP ret_17 = _Z8RealPortER(NULL, newReal(0.0))
 ;
 
@@ -52,7 +52,7 @@ return ret_17;
 
 
  static  TVP _Z18fieldInitializer19EV()	{
-/* HardwareInterface.vdmrt 24:40 */
+/* HardwareInterface.vdmrt 26:40 */
 TVP ret_18 = _Z8RealPortER(NULL, newReal(0.0))
 ;
 
@@ -62,7 +62,7 @@ return ret_18;
 
 
  static  TVP _Z18fieldInitializer18EV()	{
-/* HardwareInterface.vdmrt 19:42 */
+/* HardwareInterface.vdmrt 21:42 */
 TVP ret_19 = _Z8RealPortER(NULL, newReal(0.0))
 ;
 
@@ -72,7 +72,7 @@ return ret_19;
 
 
  static  TVP _Z18fieldInitializer17EV()	{
-/* HardwareInterface.vdmrt 17:33 */
+/* HardwareInterface.vdmrt 19:33 */
 TVP ret_20 = _Z8RealPortER(NULL, newReal(0.0))
 ;
 
@@ -82,7 +82,7 @@ return ret_20;
 
 
  static  TVP _Z18fieldInitializer16EV()	{
-/* HardwareInterface.vdmrt 15:32 */
+/* HardwareInterface.vdmrt 17:32 */
 TVP ret_21 = _Z8RealPortER(NULL, newReal(0.0))
 ;
 
@@ -92,7 +92,7 @@ return ret_21;
 
 
  static  TVP _Z18fieldInitializer15EV()	{
-/* HardwareInterface.vdmrt 9:40 */
+/* HardwareInterface.vdmrt 11:40 */
 TVP ret_22 = _Z8RealPortER(NULL, newReal(1.0))
 ;
 
@@ -102,7 +102,7 @@ return ret_22;
 
 
  static  TVP _Z18fieldInitializer14EV()	{
-/* HardwareInterface.vdmrt 7:39 */
+/* HardwareInterface.vdmrt 9:39 */
 TVP ret_23 = _Z8RealPortER(NULL, newReal(5.0))
 ;
 
@@ -112,7 +112,7 @@ return ret_23;
 
 
  static  TVP _Z18fieldInitializer13EV()	{
-/* HardwareInterface.vdmrt 5:38 */
+/* HardwareInterface.vdmrt 7:38 */
 TVP ret_24 = _Z8RealPortER(NULL, newReal(4.0))
 ;
 
@@ -244,7 +244,7 @@ static TVP new()
  --------------------------------- */ 
  
 
-/* HardwareInterface.vdmrt 1:7 */
+/* HardwareInterface.vdmrt 3:7 */
  TVP _Z17HardwareInterfaceEV(HardwareInterfaceCLASS this)	{
 
 TVP __buf = NULL

@@ -73,7 +73,7 @@ struct HardwareInterface
  --------------------------------- */ 
  
 
-	/* HardwareInterface.vdmrt 1:7 */
+	/* HardwareInterface.vdmrt 3:7 */
 	TVP _Z17HardwareInterfaceEV(HardwareInterfaceCLASS this_);
 
 
