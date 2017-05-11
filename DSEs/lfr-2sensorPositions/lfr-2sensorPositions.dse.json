@@ -1,6 +1,6 @@
 {
     "algorithm": {},
-    "objectiveConstraints": {},
+    "objectiveConstraints": [],
     "objectiveDefinitions": {
         "externalScripts": {
 			"meanSpeed": {
@@ -38,7 +38,7 @@
         },
         "internalFunctions": {}
     },
-    "parameterConstraints": {},
+    "parameterConstraints": [],
     "parameters": {
         "{sensor1FMU}.sensor1.lf_position_x": [
             0.01
